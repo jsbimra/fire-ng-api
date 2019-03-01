@@ -29,7 +29,7 @@ const RSA_PUBLIC_KEY = fs.readFileSync(normalPath + '/public.pem', 'utf8');
 app.use(express.json());
 
 // Put after the express.json() call
-app.use('/', routes);
+app.use('*', routes);
 
 //not working due to: need to set right key path in format
 // const checkIfAuthenticated = expressJwt({
