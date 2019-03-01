@@ -3,5 +3,8 @@
     "name": "fire-ng-api",
     "builds": [
         { "src": "*/index.js", "use": "@now/node-server" }
+    ],
+    "routes": [
+        { "src": "/api/*", "methods": ["POST", "GET"] }
     ]
 }
