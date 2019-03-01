@@ -1,0 +1,10 @@
+{
+  "version": 2,
+    "name": "fire-ng-api",
+    "builds": [
+        { "src": "server/index.ts", "use": "@now/node" }
+    ],
+    "routes": [
+        { "src": "/(.*)", "dest": "index.ts" }
+    ]
+}
