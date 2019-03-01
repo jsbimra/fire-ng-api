@@ -5,6 +5,9 @@
         { "src": "*/index.js", "use": "@now/node-server" }
     ],
     "routes": [
-        { "src": "/api/*", "methods": ["POST", "GET"] }
+        { "src": "/api", "methods": ["POST", "GET"] },
+        { "src": "/api/users", "methods": ["POST", "GET"] },
+        { "src": "/api/login", "methods": ["POST", "GET"] },
+        { "src": "/api/secretTest", "methods": ["POST", "GET"] }
     ]
 }
