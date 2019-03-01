@@ -118,7 +118,5 @@ routes.post('/login', (req, res) => {
     }
 });
 
-// start our server on port 3000
-app.listen(port, 'localhost', function () {
-    console.log(`Server now listening on: ${port}`);
-});
+//Now configuration 
+app.listen();

@@ -2,7 +2,7 @@
   "version": 2,
     "name": "fire-ng-api",
     "builds": [
-        { "src": "server/index.js", "use": "@now/node" }
+        { "src": "*/index.js", "use": "@now/node-server" }
     ],
     "routes": [
         { "src": "/(.*)", "dest": "index.js" }
