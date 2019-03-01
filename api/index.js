@@ -70,11 +70,11 @@ const users = [
 const readAllUsers = (req, res) => res.json(['All users arrays object to return ']);
 
 //Routes
-routes.get('/', (req, res) => res.send({ hello: 'api is up and running!' }));
+routes.get('*', (req, res) => res.send({ hello: 'api is up and running!' }));
 
-routes.get('/users', checkIfAuthenticated, readAllUsers);
+routes.get('*/users', checkIfAuthenticated, readAllUsers);
 
-routes.get('/secretTest', checkIfAuthenticated,
+routes.get('*/secretTest', checkIfAuthenticated,
     (req, res) => {
         console.log('reached to secret test API');
         res.status(200).json({
@@ -84,7 +84,7 @@ routes.get('/secretTest', checkIfAuthenticated,
     err => console.error(new Error('secret issue ' + err))
 );
 
-routes.post('/login', (req, res) => {
+routes.post('*/login', (req, res) => {
     console.log('SERVER:Login POST request object', req.body);
 
     let name = '';
