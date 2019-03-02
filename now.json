@@ -5,7 +5,7 @@
         { "src": "*/index.js", "use": "@now/node-server" }
   ],
     "routes": [
-      { "src": "/users", "dest": "/index.js" },
-      { "src": "/(.*)", "dest": "/index.js" }
+      { "src": "/users", "dest": "*/index.js" },
+      { "src": "/(.*)", "dest": "/api/index.js" }
     ]
 }
