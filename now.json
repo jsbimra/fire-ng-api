@@ -5,9 +5,10 @@
         { "src": "*/index.js", "use": "@now/node-server" }
   ],
     "routes": [
-      { "src": "/users", "dest": "/api/index.js" },
+      { "src": "/users", "methods": ["GET"], "dest": "/api/index.js" },
+      { "src": "/users", "methods": ["GET"], "dest": "/api/index.js" },
       { "src": "/login", "methods": ["POST"], "dest": "/api/index.js" },
-      { "src": "/*", "dest": "/api/index.js" },
+      { "src": "/*",  "methods": ["GET", "POST"],  "dest": "/api/index.js" },
       { "src": ".*", "dest": "/api/index.js" }
     ]
 }
