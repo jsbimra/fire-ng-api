@@ -70,7 +70,7 @@ const users = [
 const readAllUsers = (req, res) => res.send(['All users arrays object to return ']);
 
 //Routes
-routes.get('/', (req, res) => res.send({ boom: 'API is up and running!' }));
+// routes.get('/', (req, res) => res.send({ boom: 'API is up and running!' }));
 
 routes.get('/dummyusers', readAllUsers);
 routes.get('/users', checkIfAuthenticated, readAllUsers);
